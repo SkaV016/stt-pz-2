@@ -191,5 +191,24 @@ describe('Test suite for testing multiplication function', () => {
       expect(lib.isLowerCase('-')).toEqual(false);
     });
   });
+  
+  describe('factorial function tests', () => {
+    it('should return 120 for input 5', () => {
+      expect(lib.factorial(5)).toEqual(120);
+    });
+
+    it('should return 1 for input 0', () => {
+      expect(lib.factorial(0)).toEqual(1);
+    }); 
+    it('should return 1 for input 1', () => {
+      expect(lib.factorial(1)).toEqual(1);
+    });
+    it('should return NaN for negative input', () => {
+      expect(lib.factorial(-3)).toEqual(NaN);
+    });
+    it('should return NaN for non-integer input', () => {
+      expect(lib.factorial(4.5)).toEqual(NaN);
+    });
+  });
 
 });
