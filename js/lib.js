@@ -140,6 +140,20 @@ function hasSubString(str, subStr) {
 function isLowerCase(char) {
   return char === char.toLowerCase() && char !== char.toUpperCase();
 }
+function factorial(n) {
+  const num = Number(n);
+  if (num < 0 || !Number.isInteger(num)) {
+    return NaN;
+  }
+  if (num === 0 || num === 1) {
+    return 1;
+  }
+  let result = 1;
+  for (let i = 2; i <= num; i++) {
+    result *= i;
+  }
+  return result;
+}
 
 module.exports = {
   sum,
@@ -156,5 +170,6 @@ module.exports = {
   cancatString,
   splitString,
   hasSubString,
-  isLowerCase
+  isLowerCase,
+  factorial
 }
